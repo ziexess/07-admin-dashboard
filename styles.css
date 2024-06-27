@@ -82,7 +82,9 @@
   cursor: pointer;
 }
 
-.navbar-item > img {
+.navbar-item > img,
+.search > img,
+.icon {
   align-self: center;
   width: 2rem;
   cursor: pointer;
@@ -104,16 +106,116 @@
   background-color: #374151;
   display: grid;
   grid-template-rows: 1fr 2fr;
+  padding: 0.3rem 1rem;
+  box-shadow: 2px 3px 8px 2px #888888;
 }
 
 .header-top {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
+  column-gap: 1rem;
+}
+
+.search {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+}
+
+.search > img {
+  justify-self: end;
+}
+
+.search > input {
+  appearance: none;
+  width: 40vw;
+  border-radius: 1rem;
+  background-color: #f8fafc;
+}
+
+.user-preview {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  column-gap: 1rem;
+  justify-items: end;
+}
+
+.user-preview > p {
+  font-weight: 700;
+  font-size: 1.4rem;
+  justify-self: start;
+  align-self: center;
+  width: fit-content;
+  cursor: pointer;
+  color:#f8fafc;
+}
+
+.pic {
+  width: 3rem;
+  border-radius: 50%;
+  background-color: #5b21b6;
+  cursor: pointer;
+  align-self: center;
+  justify-self: center;
 }
 
 .header-bot {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
+
+}
+
+.user-info {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 1rem;
+}
+
+.user-info > p {
+  grid-column: 2/3;
+  width: fit-content;
+}
+
+.user-info p:nth-child(3) {
+  font-weight: 700;
+  font-size: 2rem;
+  justify-self: start;
+  color:#f8fafc;
+}
+
+.hash {
+  font-size: 1.2rem;
+  font-weight: 500;
+  align-self:flex-end;
+  color:#f8fafc;
+}
+
+.user-info > img {
+  grid-row: span 2;
+  width: 5rem;
+  border-radius: 50%;
+  background-color: #5b21b6;
+  cursor: pointer;
+  align-self: center;
+  justify-self: end;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+button {
+  width: 80%;
+  border-radius: 10px;
+  background-color: #9ca3af;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border:solid #9ca3af;
+  cursor: pointer;
+  padding: 0;
 }
 
 .main-content {
